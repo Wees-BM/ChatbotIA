@@ -1,0 +1,17 @@
+{
+    "name": "chatbot-ia-1nort",
+    "version": "1.0.0",
+    "description": "Chatbot com IA especializado em fazer o atendimento com enfase em energia solar. Powered by 1Nort Marketing Digital",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "node": "^18.20.4",
+        "path": "0.12.7",
+        "react": "^17.0.2",
+        "sequelize": "6.37.3",
+        "sequelize-cli": "6.6.2"
+    }
+}

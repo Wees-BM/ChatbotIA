@@ -1,0 +1,30 @@
+services:
+  nodejs:
+    build: ./nodejs
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://admin:1nort818@db:5432/chatbotia
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - nodejs
+
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1nort818
+      POSTGRES_DB: chatbotia
+      POSTGRES_HOST: postgresql://admin:1nort818@db:5432/chatbotia
+      POSTGRES_PORT: 5432

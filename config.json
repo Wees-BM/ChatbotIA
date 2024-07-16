@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "admin",
+    "password": "1nort818",
+    "database": "chatbotia",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
